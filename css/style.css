@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box; }
+
+header {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  margin-top: 100px;
+  height: 12vh;
+  padding-left: 30px;
+  background: #d4a4dd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #c57cd1;
+  border-left: 2px solid #c57cd1;
+  border-right: 2px solid #c57cd1; }
+  header h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px; }
+  header .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%; }
+  header a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 2px solid white; }
+    header a:hover {
+      background: #c57cd1; }
+  header .sort select {
+    height: 31px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid #c57cd1;
+    border-radius: 3px; }
+    header .sort select:focus {
+      outline: none; }
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  max-height: 65vh;
+  font-size: 20px;
+  border: 2px solid #c57cd1; }
+  main .weekdays {
+    background: #d4a4dd; }
+    main .weekdays .row {
+      height: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2px; }
+      main .weekdays .row div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        margin: 1px 0; }
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  height: 400px;
+  width: 600px;
+  margin: auto;
+  border: 2px solid #c57cd1;
+  border-radius: 3px;
+  padding: 30px 20px; }
+  .container form {
+    height: 100%;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 500; }
+    .container form .name {
+      padding: 8px 10px;
+      border-bottom: 3px solid #c57cd1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .container form .name input {
+        border: 2px solid #c57cd1;
+        border-radius: 3px;
+        width: 200px;
+        height: 31px; }
+        .container form .name input:focus {
+          outline: none; }
+    .container form .participants {
+      padding: 8px 10px;
+      border-bottom: 3px solid #c57cd1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .container form .participants select {
+        width: 100px;
+        height: 31px;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        border: 2px solid #c57cd1;
+        border-radius: 3px; }
+        .container form .participants select:focus {
+          outline: none; }
+    .container form .day {
+      padding: 8px 10px;
+      border-bottom: 3px solid #c57cd1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .container form .day select {
+        width: 100px;
+        height: 31px;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        border: 2px solid #c57cd1;
+        border-radius: 3px; }
+        .container form .day select:focus {
+          outline: none; }
+    .container form .time {
+      padding: 8px 10px;
+      border-bottom: 3px solid #c57cd1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .container form .time select {
+        width: 100px;
+        height: 31px;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        border: 2px solid #c57cd1;
+        border-radius: 3px; }
+        .container form .time select:focus {
+          outline: none; }
+    .container form .btns {
+      display: flex;
+      justify-content: space-around;
+      font-size: 16px; }
+      .container form .btns a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        border: 2px solid white;
+        color: black;
+        border: 2px solid #c57cd1;
+        width: 100px;
+        text-align: center; }
+        .container form .btns a:hover {
+          background: #c57cd1; }
+      .container form .btns button {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        border: 2px solid white;
+        background: white;
+        color: black;
+        border: 2px solid #c57cd1;
+        width: 100px;
+        font-size: 16px;
+        font-weight: 500; }
+        .container form .btns button:hover {
+          background: #c57cd1; }
+        .container form .btns button:focus {
+          outline: none; }

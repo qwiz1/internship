@@ -1,0 +1,100 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: $content-font;
+    box-sizing: border-box;
+}
+
+
+@mixin containers {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+@mixin buttons {
+    color: white; 
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 2px solid white;
+    &:hover{
+    background: #c57cd1;
+    }
+}
+
+@mixin selections {
+    height: 31px;
+    font-size: 16px;
+    font-family: $content-font;
+    border: 2px solid $main-border-color;
+    border-radius: 3px
+}
+
+header{
+    @include containers();
+    h1{
+        font-family: $content-font;
+        font-size: 40px;
+    }
+    margin-top: 100px;
+    height: 12vh;
+    padding-left: 30px;
+
+    background: $bg-color;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 2px solid $main-border-color;
+    border-left: 2px solid $main-border-color;
+    border-right: 2px solid $main-border-color;
+
+    .options{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 30%;
+    }
+    a{
+        @include buttons();
+    }
+
+    .sort{
+        select{
+            @include selections();
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}   
+
+
+main{
+    @include containers();
+    max-height: 65vh;
+    font-size: 20px;
+
+    border: 2px solid $main-border-color;
+
+    .weekdays{
+        background: $bg-color;
+        .row{
+            height: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 2px;
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: white;
+                margin: 1px 0;
+            }
+        }
+    }
+}
+
