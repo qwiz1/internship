@@ -11,21 +11,22 @@
 </head>
 
 <body>
+    
     <div class="container">
-        <form>
+        <form id="event-form">
 
             <div class="name">
-                <label for="name-of-event">Name of the event:</label>
-                <input type="text" id="name-of-event">
+                <label for="name">Name of the event:</label>
+                <input type="text" id="name" required>
             </div>
 
             <div class="participants">
                 <label for="participants">Participants:</label>
                 <select id="participants">
-                    <option value="1">Olha...</option>
-                    <option value="2">Anton</option>
-                    <option value="3">Stas</option>
-                    <option value="4">Victor</option>
+                    <option value="Olha">Olha...</option>
+                    <option value="Anton">Anton</option>
+                    <option value="Stas">Stas</option>
+                    <option value="Victor">Victor</option>
                 </select>
             </div>
 
@@ -57,11 +58,13 @@
 
             <div class="btns">
                 <a href="index.html">Cancel</a>
-                <button type="button">Create</button>
+                <button type="button" id="set-event">Create</button>
             </div>
 
         </form>
     </div>
+    <script src="js/create-event.js"></script>
+
 </body>
 
 </html>
