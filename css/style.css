@@ -8,9 +8,9 @@ header {
   max-width: 1200px;
   margin: auto;
   width: 100%;
-  margin-top: 100px;
-  height: 12vh;
+  height: 10vh;
   padding-left: 30px;
+  margin-top: 4%;
   background: #d4a4dd;
   display: flex;
   justify-content: space-between;
@@ -47,22 +47,58 @@ main {
   max-width: 1200px;
   margin: auto;
   width: 100%;
-  max-height: 65vh;
-  font-size: 20px;
+  font-size: 18px;
   border: 2px solid #c57cd1; }
-  main .weekdays {
-    background: #d4a4dd; }
-    main .weekdays .row {
-      height: 60px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      gap: 2px; }
-      main .weekdays .row div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: white;
-        margin: 1px 0; }
+  main .weekdays .row {
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+    main .weekdays .row div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #d4a4dd; }
+      main .weekdays .row div .cell {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: #bdf3bd; }
+        main .weekdays .row div .cell .info {
+          border: none;
+          display: flex;
+          flex-direction: column;
+          width: 80%; }
+          main .weekdays .row div .cell .info h3 {
+            font-size: 18px;
+            text-align: center; }
+          main .weekdays .row div .cell .info p {
+            font-size: 14px; }
+      main .weekdays .row div button {
+        opacity: 50%;
+        border: none;
+        box-sizing: border-box;
+        margin: 1px 0;
+        background-color: #ffffff;
+        color: #484848;
+        border-radius: 50%;
+        font-size: 20px;
+        width: 32px;
+        height: 32px; }
+        main .weekdays .row div button:focus {
+          outline: none; }
+        main .weekdays .row div button:hover {
+          opacity: 100%; }
+
+.alert-container {
+  width: 800px;
+  height: 100px;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #ffc6ce;
+  text-align: center;
+  padding: 35px;
+  font-size: 24px;
+  color: #c13636; }
 
 .container {
   position: absolute;
