@@ -22,7 +22,7 @@ function createEvent() {
         }
         localStorage.setItem(obj.name, JSON.stringify(obj));
 
-        window.location.href = '/index.html';
+        window.location.href = 'internship/index.html';
     }
     return obj;
 }
