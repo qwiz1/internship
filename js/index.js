@@ -1,14 +1,51 @@
-let eventKeys = Object.keys(localStorage);
+// const rows = document.querySelectorAll('.row');
+const sort = document.getElementById('sort');
 
-function showEvents() {
+const table = document.getElementById('table');
+// table.addEventListener('click', whatElement)
+
+// function move(e) {
+//     console.log(e.target);    
+// }
+
+// function whatElement(event) {
+//     if (event.target.classList.value === 'cell') {
+//         console.log(event.target)
+//         event.target.addEventListener('mousemove', move);
+        
+//     } else if (event.target.classList.value === 'info') {
+//         console.log(event.target.parentElement)
+//         event.target.parentElement.addEventListener('mousemove', move);
+
+//     }
+
+// }
+
+sort.addEventListener('change', () => {
+    showEvents(sort.value);
+})
+
+function showEvents(memb) {
+    cleanTable();
+    const meetings = [];
+    let eventKeys = Object.keys(localStorage);
     for (let key of eventKeys) {
-        let meetings = JSON.parse(localStorage.getItem(key));
-        fillInItem(meetings.name, meetings.day, meetings.time, meetings.participants);
+        meetings.push(JSON.parse(localStorage.getItem(key)));
+    }
+
+    for (let key of meetings) {
+        if (memb === key.participants) {
+            fillInCell(key.name, key.day, key.time, key.participants);
+        }
+        if (memb === 'all') {
+            fillInCell(key.name, key.day, key.time, key.participants);
+        }
     }
 }
-showEvents();
+showEvents(sort.value);
 
-function fillInItem(name, day, time, participants) {
+function fillInCell(name, day, time, participants) {
+
     const dayNambering = {
         mon: 1,
         tue: 2,
@@ -34,7 +71,6 @@ function fillInItem(name, day, time, participants) {
 
     btn.addEventListener('click', (e) => {
         localStorage.removeItem(title.textContent)
-        
         e.target.parentElement.remove();
     })
 
@@ -48,5 +84,12 @@ function fillInItem(name, day, time, participants) {
     row.children[indexOfDay].append(cell);
 }
 
-
+function cleanTable() {
+    const cells = document.querySelectorAll('.cell');
+    if (cells) {
+        for (let key of cells) {
+            key.remove();
+        }
+    }
+}
 

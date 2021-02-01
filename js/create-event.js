@@ -21,12 +21,10 @@ function createEvent() {
             return;
         }
         localStorage.setItem(obj.name, JSON.stringify(obj));
-
         window.location.href = 'index.html';
     }
     return obj;
 }
-
 
 function checkForRepeat(day, time) {
     for (let key of eventKeys) {
@@ -36,7 +34,6 @@ function checkForRepeat(day, time) {
         }
     }
 }
-
 
 function showAlert() {
     const box = document.createElement('div');
