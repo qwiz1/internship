@@ -21,7 +21,8 @@ function createEvent() {
             return;
         }
         localStorage.setItem(obj.name, JSON.stringify(obj));
-        window.location.href = '../index.html';
+
+        window.location.href = '/index.html';
     }
     return obj;
 }
