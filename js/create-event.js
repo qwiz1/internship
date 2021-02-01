@@ -22,7 +22,7 @@ function createEvent() {
         }
         localStorage.setItem(obj.name, JSON.stringify(obj));
 
-        window.location.href = 'https://qwiz1.github.io/internship/index.html';
+        window.location.href = 'index.html';
     }
     return obj;
 }
