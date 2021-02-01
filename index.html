@@ -15,10 +15,12 @@
         <h1>Calendar</h1>
         <div class="options">
             <div class="sort">
-                <select name="" id="">
+                <select name="sort" id="sort">
                     <option value="all">All members</option>
-                    <option value="me">Only me</option>
-                    <option value="other">Other</option>
+                    <option value="Olha">For Olha</option>
+                    <option value="Anton">For Anton</option>
+                    <option value="Stas">For Stas</option>
+                    <option value="Victor">For Victor</option>
                 </select>
             </div>
             <a href="create-event.html">New event +</a>
@@ -26,7 +28,7 @@
     </header>
     <main>
         <section class="calendar">
-            <div class="weekdays">
+            <div class="weekdays" id="table">
 
                 <div class="row name-day">
                     <div>Name</div>
