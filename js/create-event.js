@@ -1,9 +1,13 @@
 const form = document.getElementById('event-form');
 const btnSetEvent = document.getElementById('set-event');
-
+// -------
+const ID = () => {
+    return Math.random().toString(36).substr(2, 4);
+};
+// -------
+let eventKeys = Object.keys(localStorage);
 btnSetEvent.addEventListener('click', createEvent)
 
-let eventKeys = Object.keys(localStorage);
 
 function createEvent() {
     const el = form.elements;
@@ -12,6 +16,7 @@ function createEvent() {
     for (let i of el) {
         if (i.type != 'button') {
             obj[i.id] = i.value;
+
         }
     }
 
@@ -20,9 +25,10 @@ function createEvent() {
             showAlert();
             return;
         }
-        localStorage.setItem(obj.name, JSON.stringify(obj));
+        localStorage.setItem(ID() + '_' +obj.name, JSON.stringify(obj));
         window.location.href = 'index.html';
     }
+    console.log(obj);
     return obj;
 }
 
