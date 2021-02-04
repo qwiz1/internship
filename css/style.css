@@ -10,7 +10,7 @@ header {
   width: 100%;
   height: 10vh;
   padding-left: 30px;
-  margin-top: 4%;
+  margin-top: 3%;
   background: #d4a4dd;
   display: flex;
   justify-content: space-between;
@@ -50,7 +50,7 @@ main {
   font-size: 18px;
   border: 2px solid #c57cd1; }
   main .weekdays .row {
-    height: 60px;
+    height: 75px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
     main .weekdays .row div {
@@ -59,8 +59,9 @@ main {
       align-items: center;
       border: 1px solid #d4a4dd; }
       main .weekdays .row div .cell {
+        max-width: 198px;
         width: 100%;
-        height: 100%;
+        height: 73px;
         border: none;
         background: #bdf3bd; }
         main .weekdays .row div .cell .info {
