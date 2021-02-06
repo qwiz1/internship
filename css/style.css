@@ -115,7 +115,7 @@ main {
   padding: 30px 20px; }
   .container form {
     height: 100%;
-    width: 400px;
+    width: 500px;
     margin: auto;
     display: flex;
     flex-direction: column;

@@ -7,6 +7,8 @@ addEventToEmptyZone();
 
 sort.addEventListener('change', () => {
   showMeetings(sort.value);
+  addEventsOnFullCells();
+  addEventToEmptyZone();
 });
 showMeetings(sort.value);
 

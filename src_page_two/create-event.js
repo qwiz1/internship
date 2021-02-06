@@ -38,7 +38,4 @@ function createEvent() {
   }
 }
 
-
 btnSetEvent.addEventListener('click', createEvent);
-
-
