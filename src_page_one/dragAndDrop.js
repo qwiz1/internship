@@ -1,54 +1,44 @@
-import {setNewDayAndTime} from './saveNewValue.js'
+import setNewDayAndTime from './saveNewValue';
+
 const row = document.getElementsByClassName('row');
 
-export function addEventToEmptyZone() {
-    for (let elem of row) {
-        if (elem.id) {
-            for (let i of elem.children) {
-                if (!i.textContent) {
-                    i.classList.add('dropzone');
-                    i.addEventListener('dragover', onDragOver);
-                    i.addEventListener('drop', onDrop);
-                }
-            }
-        }
-    }
-}
-
-// addEventToEmptyZone();
-
-
-export function addEventsOnFullCells() {
-    const droppable = document.querySelectorAll('.draggable');
-
-    for (let elem of droppable) {
-        elem.addEventListener('dragstart', onDragStart)
-    }
-}
-// addEventsOnFullCells()
-
-export function onDragStart(event) {
-    event.target.parentElement.classList.add('dropzone');
-    event.target.parentElement.addEventListener('dragover', onDragOver);
-    event.target.parentElement.addEventListener('drop', onDrop);
-    event.dataTransfer.setData('text/plain', event.target.id);
-}
-
 export function onDragOver(event) {
-    event.preventDefault();
+  event.preventDefault();
 }
 
 export function onDrop(event) {
-    const id = event.dataTransfer.getData('text');
-    const draggableElement = document.getElementById(id);
-    const dropZone = event.target;
-    const newTime = dropZone.parentElement.id;
-    const newNameOfDay = dropZone.getAttribute('data-day');
+  const id = event.dataTransfer.getData('text');
+  const draggableElement = document.getElementById(id);
+  const dropZone = event.target;
+  const newTime = dropZone.parentElement.id;
+  const newNameOfDay = dropZone.getAttribute('data-day');
 
-    if(dropZone.classList.value !== 'dropzone') return;
+  if (dropZone.classList.value !== 'dropzone') return;
 
-    dropZone.appendChild(draggableElement);
-    setNewDayAndTime(id, newNameOfDay, newTime);
+  dropZone.appendChild(draggableElement);
+  setNewDayAndTime(id, newNameOfDay, newTime);
 }
 
+export function addEventToEmptyZone() {
+  Array.from(row)
+    .filter((cells) => cells.id)
+    .forEach((cell) => Array.from(cell.children)
+      .filter((cellContent) => !cellContent.textContent)
+      .forEach((cellContent) => {
+        cellContent.classList.add('dropzone');
+        cellContent.addEventListener('dragover', onDragOver);
+        cellContent.addEventListener('drop', onDrop);
+      }));
+}
 
+export function onDragStart(event) {
+  event.target.parentElement.classList.add('dropzone');
+  event.target.parentElement.addEventListener('dragover', onDragOver);
+  event.target.parentElement.addEventListener('drop', onDrop);
+  event.dataTransfer.setData('text/plain', event.target.id);
+}
+
+export function addEventsOnFullCells() {
+  document.querySelectorAll('.draggable')
+    .forEach((droppable) => droppable.addEventListener('dragstart', onDragStart));
+}

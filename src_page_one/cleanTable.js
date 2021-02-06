@@ -1,8 +1,4 @@
-export function cleanTable() {
-    const cells = document.querySelectorAll('.cell');
-    if (cells) {
-        for (let key of cells) {
-            key.remove();
-        }
-    }
+export default function cleanTable() {
+  document.querySelectorAll('.cell')
+    .forEach((cell) => cell.remove());
 }

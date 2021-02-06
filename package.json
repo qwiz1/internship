@@ -4,7 +4,7 @@
   "description": "Tech Task",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint" : "eslint src*/*.js --fix"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/qwiz1/internship#readme",
   "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "webpack": "^5.20.2",
     "webpack-cli": "^4.5.0"
   }
