@@ -1,6 +1,6 @@
 # Tech task
-## It is simple meeting planning calendar for a meeting room in your office.
-Github-pages: https://qwiz1.github.io/internship/
+### It is simple meeting planning calendar for a meeting room in your office.
+#### Github-pages: https://qwiz1.github.io/internship/
 
 For this calendar, used LocalStorage as the basis for storing event information.
 
